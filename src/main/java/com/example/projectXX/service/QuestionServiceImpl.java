@@ -9,6 +9,7 @@ import java.util.List;
 public class QuestionServiceImpl implements CrudService<Question> {
     @Autowired
     private QuestionRep questionRep;
+
     @Override
     public List<Question> getAll() {
         return questionRep.findAll();
@@ -36,6 +37,6 @@ public class QuestionServiceImpl implements CrudService<Question> {
 
     @Override
     public void deleteAll() {
-questionRep.deleteAll();
+        questionRep.deleteAll();
     }
 }
