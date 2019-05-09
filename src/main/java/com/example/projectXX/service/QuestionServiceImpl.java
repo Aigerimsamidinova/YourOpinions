@@ -1,4 +1,4 @@
 package com.example.projectXX.service;
 
-public class ItemServiceImpl {
+public class QuestionServiceImpl {
 }
