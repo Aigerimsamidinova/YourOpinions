@@ -1,4 +1,4 @@
 package com.example.projectXX.model;
 
-public interface Question {
+public class Question {
 }
