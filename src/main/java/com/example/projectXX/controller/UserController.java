@@ -32,7 +32,7 @@ public class UserController {
     @PostMapping(path = "/add", produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE})
     public Response add(@RequestBody User user) {
         try {
-            return new Response("Successfully created", true, userCrudService.save(user));
+            return new Response("Successfully created", true, userCrudService.add(user));
         } catch (Exception e) {
             return new Response(e.toString(), false, null);
         }

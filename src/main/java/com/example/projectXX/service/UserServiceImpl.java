@@ -24,7 +24,7 @@ public class UserServiceImpl implements CrudService<User> {
     }
 
     @Override
-    public User save(User user) {
+    public User add(User user) {
         return userRep.save(user);
     }
 

@@ -2,9 +2,9 @@ package com.example.projectXX.model;
 
 
 
-import javax.annotation.Generated;
 import javax.persistence.*;
 import javax.validation.constraints.Email;
+import java.util.List;
 
 @Entity
 @Table(name = "User_Table")
@@ -17,6 +17,9 @@ public class User {
     private String password;
     private String name;
 
+    @OneToMany(mappedBy = "user", fetch = FetchType.EAGER)
+    private List<Commentary> comments;
+
     private User() {
     }
 
@@ -25,12 +28,13 @@ public class User {
         return "User{" + "id=" + id + ", email='" + email + '\'' + ", password='" + password + '\'' + ", name='" + name + '\'' + '}';
     }
 
-    public User(Long id, @Email String email, String password, String name) {
-        this.id = id;
+    public User(@Email String email, String password, String name, List<Commentary> comments) {
         this.email = email;
         this.password = password;
         this.name = name;
+        this.comments = comments;
     }
+
     public static class Builder {
         private String name;
         private String password;
