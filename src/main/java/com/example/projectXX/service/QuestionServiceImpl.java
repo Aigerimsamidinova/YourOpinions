@@ -3,9 +3,10 @@ package com.example.projectXX.service;
 import com.example.projectXX.model.Question;
 import com.example.projectXX.repository.QuestionRep;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+@Service
 public class QuestionServiceImpl implements CrudService<Question> {
     @Autowired
     private QuestionRep questionRep;
