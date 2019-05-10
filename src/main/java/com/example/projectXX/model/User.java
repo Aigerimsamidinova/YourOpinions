@@ -1,7 +1,5 @@
 package com.example.projectXX.model;
 
-
-
 import javax.annotation.Generated;
 import javax.persistence.*;
 import javax.validation.constraints.Email;

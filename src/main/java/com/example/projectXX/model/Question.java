@@ -16,7 +16,7 @@ public class Question {
     private User userId;
     private List<Comment> comments;
     @JoinColumn(name = "category_id")
-    private Categories categoryId;
+    private Category categoryId;
     private Mark mark;
     private Integer markCounter;
 
