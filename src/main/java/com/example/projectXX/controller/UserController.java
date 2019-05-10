@@ -1,8 +1,10 @@
 package com.example.projectXX.controller;
 
+import com.example.projectXX.model.Comment;
 import com.example.projectXX.model.Response;
 import com.example.projectXX.model.User;
 import com.example.projectXX.service.CrudService;
+import com.example.projectXX.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
@@ -14,10 +16,16 @@ import java.util.List;
 public class UserController {
     @Autowired
    private CrudService<User>userCrudService;
+    @Autowired
+    private UserService userService;
     
     @GetMapping(path = "/getAll", produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE})
     public List<User> getAll() {
         return userCrudService.getAll();
+    }
+    @GetMapping("/{id}/comments")
+    private List<Comment> getUserComments(@PathVariable Long id){
+        return userService.getUserComments(id);
     }
 
     @GetMapping(path = "/get/{id}", produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE})

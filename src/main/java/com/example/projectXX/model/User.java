@@ -7,7 +7,7 @@ import javax.persistence.*;
 import javax.validation.constraints.Email;
 
 @Entity
-@Table(name = "User_Table")
+@Table(name = "user_table")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

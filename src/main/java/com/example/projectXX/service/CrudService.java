@@ -1,5 +1,7 @@
 package com.example.projectXX.service;
 
+
+
 import java.util.List;
 
 public interface CrudService<T> {
@@ -9,4 +11,5 @@ public interface CrudService<T> {
     T update(T t);
     void deleteById(Long id);
     void deleteAll();
+
 }

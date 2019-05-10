@@ -1,5 +1,7 @@
 package com.example.projectXX.bootstrap;
 
+import com.example.projectXX.enums.Mark;
+import com.example.projectXX.model.Comment;
 import com.example.projectXX.model.User;
 import com.example.projectXX.service.CrudService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +17,7 @@ public class UserBootstrap implements CommandLineRunner {
         User user=new User.Builder().withEmail("serikovastik@gmail.com").withName("Astik").withPassword("123").build();
         System.out.println(user);
         userCrudService.save(user);
+
 
 
 
